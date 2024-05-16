@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:insta/bottombar_widget.dart';
+import 'package:insta/post_widget.dart';
 import 'package:insta/story.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -46,8 +47,16 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
         centerTitle: true,
       ),
-      body: StoryWidget(),
-      bottomNavigationBar: BottomBarWidget(),
+      body: Column(
+        children: [
+          StoryWidget(),
+          const Divider(color: Colors.grey),
+          Expanded(
+            child: PostWidget(),
+          ),
+        ],
+      ),
+      bottomNavigationBar: const BottomBarWidget(),
     );
   }
 }
