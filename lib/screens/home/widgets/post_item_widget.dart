@@ -9,6 +9,7 @@ class PostItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start, // Align text to the start
       children: [
         ListTile(
           leading: CircleAvatar(
@@ -36,47 +37,96 @@ class PostItemWidget extends StatelessWidget {
             ),
           ),
         ),
-        Container(
+        Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: Row(
             children: [
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Image.asset(
+                      'assets/images/like.png',
+                      width: 25,
+                      height: 25,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Image.asset(
+                      'assets/images/chat.png',
+                      width: 25,
+                      height: 25,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Image.asset(
+                      'assets/images/send.png',
+                      width: 25,
+                      height: 25,
+                    ),
+                  ),
+                ],
+              ),
+              const Spacer(),
+              IconButton(
+                onPressed: () {},
+                icon: Image.asset(
+                  'assets/images/bookmark.png',
+                  width: 25,
+                  height: 25,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              RichText(
+                text: TextSpan(
+                  style: const TextStyle(
+                    color: Colors.black,
+                  ),
                   children: [
-                    IconButton(
-                      onPressed: () {},
-                      icon: Image.asset(
-                        "assets/images/like.png",
-                        width: 25,
-                        height: 25,
+                    const TextSpan(text: 'Liked by '),
+                    TextSpan(
+                      text: post.name,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Image.asset(
-                        "assets/images/chat.png",
-                        width: 25,
-                        height: 25,
-                      ),
-                    ),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Image.asset(
-                        "assets/images/send.png",
-                        width: 25,
-                        height: 25,
+                    const TextSpan(text: ' and '),
+                    const TextSpan(
+                      text: 'others ',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ],
                 ),
               ),
-              IconButton(
-                onPressed: () {},
-                icon: Image.asset(
-                  "assets/images/bookmark.png",
-                  width: 25,
-                  height: 25,
+              const SizedBox(height: 4),
+              RichText(
+                text: TextSpan(
+                  style: const TextStyle(
+                    color: Colors.black,
+                  ),
+                  children: [
+                    TextSpan(
+                      text: post.name,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const TextSpan(
+                      text:
+                          ' The game in Japan was amazing and I want to share some photos',
+                    ),
+                  ],
                 ),
               ),
             ],
