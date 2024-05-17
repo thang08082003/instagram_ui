@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:insta/bottombar_widget.dart';
-import 'package:insta/post_widget.dart';
-import 'package:insta/story.dart';
+import 'package:insta/bottom_navigation_bar_widget.dart';
+import 'package:insta/post_list_widget.dart';
+
+import 'package:insta/story_list_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -49,14 +50,14 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-          StoryWidget(),
+          StoryListWidget(),
           const Divider(color: Colors.grey),
           Expanded(
-            child: PostWidget(),
+            child: PostListWidget(),
           ),
         ],
       ),
-      bottomNavigationBar: const BottomBarWidget(),
+      bottomNavigationBar: const BottomNavigationBarWidget(),
     );
   }
 }
