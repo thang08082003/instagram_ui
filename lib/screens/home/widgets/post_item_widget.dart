@@ -82,32 +82,41 @@ class PostItemWidget extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              RichText(
-                text: TextSpan(
-                  style: const TextStyle(
-                    color: Colors.black,
+              Row(
+                children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage(post.image),
+                    radius: 12,
                   ),
-                  children: [
-                    const TextSpan(text: 'Liked by '),
-                    TextSpan(
-                      text: post.name,
+                  const SizedBox(width: 5),
+                  RichText(
+                    text: TextSpan(
                       style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
+                      children: [
+                        const TextSpan(text: 'Liked by '),
+                        TextSpan(
+                          text: post.name,
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const TextSpan(text: ' and '),
+                        const TextSpan(
+                          text: 'others',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
                     ),
-                    const TextSpan(text: ' and '),
-                    const TextSpan(
-                      text: 'others ',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               const SizedBox(height: 4),
               RichText(
