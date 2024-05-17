@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:insta/bottom_navigation_bar_widget.dart';
-import 'package:insta/post_list_widget.dart';
+import 'package:insta/commons_widget/bottom_navigation_bar_widget.dart';
+import 'package:insta/screens/home/widgets/post_list_widget.dart';
 
-import 'package:insta/story_list_widget.dart';
+import 'package:insta/screens/home/widgets/story_list_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

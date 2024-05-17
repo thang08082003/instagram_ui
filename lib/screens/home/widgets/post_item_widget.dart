@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'post.dart';
+import '../../../data/models/post.dart';
 
 class PostItemWidget extends StatelessWidget {
   final Post post;
