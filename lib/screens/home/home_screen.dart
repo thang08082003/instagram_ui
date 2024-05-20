@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:insta/bottombar_widget.dart';
-import 'package:insta/story.dart';
+import 'package:insta/commons_widget/bottom_navigation_bar_widget.dart';
+import 'package:insta/screens/home/widgets/post_list_widget.dart';
+import 'package:insta/screens/home/widgets/story_list_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -46,8 +47,16 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
         centerTitle: true,
       ),
-      body: StoryWidget(),
-      bottomNavigationBar: BottomBarWidget(),
+      body: Column(
+        children: [
+          StoryListWidget(),
+          const Divider(color: Colors.grey),
+          Expanded(
+            child: PostListWidget(),
+          ),
+        ],
+      ),
+      bottomNavigationBar: const BottomNavigationBarWidget(),
     );
   }
 }

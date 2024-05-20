@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-class BottomBarWidget extends StatelessWidget {
+class BottomNavigationBarWidget extends StatelessWidget {
+  const BottomNavigationBarWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
@@ -44,10 +46,13 @@ class BottomBarWidget extends StatelessWidget {
           const Spacer(),
           IconButton(
             onPressed: () {},
-            icon: Image.asset(
-              "assets/images/user.png",
-              width: 25,
-              height: 25,
+            icon: ClipOval(
+              child: Image.asset(
+                "assets/images/avt1.png",
+                width: 25,
+                height: 25,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ],

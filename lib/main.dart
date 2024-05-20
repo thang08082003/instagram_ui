@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:insta/home_screen.dart';
+import 'package:insta/screens/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,13 +14,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
-          elevation: 1,
+          elevation: 2,
           color: Colors.white,
         ),
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
