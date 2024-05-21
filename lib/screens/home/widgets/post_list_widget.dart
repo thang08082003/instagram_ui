@@ -31,7 +31,7 @@ class PostListWidget extends StatelessWidget {
     Post(
         image: "assets/images/avt7.png",
         name: "User 7",
-        location: "VienChan, Lao"),
+        location: "VeinChan, Lao"),
     Post(
         image: "assets/images/avt8.png",
         name: "User 8",
