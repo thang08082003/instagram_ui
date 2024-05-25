@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:insta/screens/home/home_screen.dart';
+import 'package:insta/screens/home/explore_screen.dart';
 
 class BottomNavigationBarWidget extends StatelessWidget {
   const BottomNavigationBarWidget({super.key});
@@ -9,7 +11,12 @@ class BottomNavigationBarWidget extends StatelessWidget {
       child: Row(
         children: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
+              );
+            },
             icon: Image.asset(
               "assets/images/home.png",
               width: 25,
@@ -18,7 +25,12 @@ class BottomNavigationBarWidget extends StatelessWidget {
           ),
           const Spacer(),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ExploreScreen()),
+              );
+            },
             icon: Image.asset(
               "assets/images/search.png",
               width: 25,
