@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//WebContent/Exam_MainPage.css=UTF-8
+encoding//WebContent/WEB-INF/Admin_MainPage.jsp=UTF-8
+encoding//WebContent/WEB-INF/DoExam.jsp=UTF-8
+encoding//WebContent/WEB-INF/ExamInfo.jsp=UTF-8
+encoding//WebContent/WEB-INF/Exam_MainPage.jsp=UTF-8
+encoding//WebContent/WEB-INF/Exam_ViewExam.jsp=UTF-8
+encoding//WebContent/WEB-INF/Exam_ViewTest.jsp=UTF-8
+encoding//WebContent/WEB-INF/HomePage.jsp=UTF-8
+encoding//WebContent/index.jsp=UTF-8
+encoding//src/wp/zenny/controller/Admin_Main.java=UTF-8
+encoding//src/wp/zenny/controller/DoExam.java=UTF-8
+encoding//src/wp/zenny/controller/InsertUser.java=UTF-8
+encoding//src/wp/zenny/dao/ErrorCode.java=UTF-8
+encoding//src/wp/zenny/model/User.java=UTF-8
